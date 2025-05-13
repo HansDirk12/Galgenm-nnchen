@@ -8,8 +8,8 @@ const io = require('socket.io')(http, {
     }
 });
 
-// Statische Dateien werden nicht mehr benötigt, da diese auf Netlify liegen
-// app.use(express.static('./'));
+// Serve static files
+app.use(express.static(__dirname));
 
 const games = new Map();
 
