@@ -2,7 +2,8 @@
 const socket = io('https://galgenmannchen.onrender.com', {
     transports: ['websocket', 'polling'],
     cors: {
-        origin: "*"
+        origin: "*",
+        credentials: true
     }
 });
 
