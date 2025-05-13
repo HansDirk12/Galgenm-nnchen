@@ -1,54 +1,34 @@
-# Aqua-Vogt Website
+# Multiplayer Galgenmännchen
 
-Eine moderne, responsive Website für Aqua-Vogt, Ihren Spezialisten für Wasserlösungen.
+Ein Online-Multiplayer-Galgenmännchen-Spiel, das Sie mit Freunden spielen können.
 
-## Projektstruktur
+## Spielen
 
-```
-aqua-vogt/
-├── index.html          # Hauptseite
-├── styles/            
-│   └── main.css        # Hauptstylsheet
-└── images/             # Bildverzeichnis
-    └── hero-bg.jpg     # Hero-Hintergrundbild
-```
+Sie können das Spiel auf zwei Arten spielen:
 
-## Features
+1. Über GitHub Pages:
+   - Besuchen Sie [https://hansdirk12.github.io/Galgenm-nnchen](https://hansdirk12.github.io/Galgenm-nnchen)
 
-- Responsive Design für alle Geräte
-- Moderne UI mit Clean Design
-- Kontaktformular
-- Leistungsübersicht
-- Über uns Sektion
-- Footer mit wichtigen Links
+2. Über Render:
+   - Besuchen Sie [https://galgenmannchen.onrender.com](https://galgenmannchen.onrender.com)
 
-## Setup
+## Spielanleitung
 
-1. Klonen Sie das Repository
-2. Öffnen Sie `index.html` in einem modernen Webbrowser
-3. Optional: Starten Sie einen lokalen Webserver für die Entwicklung
+1. **Spiel erstellen (Wortgeber)**
+   - Geben Sie Ihren Namen ein
+   - Klicken Sie auf "Spiel erstellen"
+   - Sie erhalten einen Spiel-Code
+   - Teilen Sie diesen Code mit Ihrem Mitspieler
+   - Geben Sie ein Wort ein, wenn der Mitspieler beigetreten ist
 
-## Anpassungen
+2. **Spiel beitreten (Rater)**
+   - Geben Sie Ihren Namen ein
+   - Geben Sie den erhaltenen Spiel-Code ein
+   - Klicken Sie auf "Spiel beitreten"
+   - Raten Sie die Buchstaben des Wortes
 
-- Ersetzen Sie die Platzhalterbilder in `/images` mit Ihren eigenen Bildern
-- Aktualisieren Sie die Kontaktinformationen in `index.html`
-- Passen Sie die Farben in `styles/main.css` an Ihr Branding an
+## Technische Details
 
-## Browser-Unterstützung
-
-- Chrome (neueste Version)
-- Firefox (neueste Version)
-- Safari (neueste Version)
-- Edge (neueste Version)
-
-## Technologien
-
-- HTML5
-- CSS3
-- Google Fonts (Open Sans & Montserrat)
-- Responsive Design
-- Flexbox & CSS Grid
-
-## Kontakt
-
-Für Fragen und Anpassungen kontaktieren Sie uns unter [Kontaktinformationen einfügen]. 
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js mit Express und Socket.IO
+- Hosting: GitHub Pages (Frontend) und Render (Backend) 
