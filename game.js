@@ -1,5 +1,5 @@
 // Verbindung zum Server
-const socket = io('https://galgenmännchen.onrender.com');
+const socket = io('https://galgenmannchen.onrender.com');
 
 // DOM Elemente
 const menu = document.getElementById('menu');
