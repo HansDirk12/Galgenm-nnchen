@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Galgenmännchen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="menu" class="menu active">
+            <h1>Galgenmännchen</h1>
+            <div class="menu-content">
+                <input type="text" id="playerName" placeholder="Dein Name" maxlength="15">
+                <button id="createGame">Spiel erstellen (Wortgeber)</button>
+                <div id="gameCode" class="game-code hidden">
+                    <p>Spiel-Code:</p>
+                    <span id="codeDisplay"></span>
+                </div>
+                <div class="join-game">
+                    <input type="text" id="joinCode" placeholder="Spiel-Code eingeben">
+                    <button id="joinGame">Spiel beitreten (Rater)</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="wordInput" class="screen hidden">
+            <h2>Gib dein Wort ein</h2>
+            <input type="password" id="secretWord" placeholder="Geheimes Wort" maxlength="20">
+            <p class="hint">Nur Buchstaben erlaubt (A-Z, Ä,Ö,Ü)</p>
+            <button id="submitWord">Wort bestätigen</button>
+        </div>
+
+        <div id="game" class="screen hidden">
+            <div class="game-info">
+                <div class="player-info">
+                    <span id="player1Name">Wortgeber</span>
+                </div>
+                <div class="player-info">
+                    <span id="player2Name">Rater</span>
+                </div>
+            </div>
+
+            <div class="hangman">
+                <canvas id="hangmanCanvas" width="200" height="250"></canvas>
+            </div>
+
+            <div class="word-display">
+                <div id="wordContainer"></div>
+                <div id="usedLetters">Benutzte Buchstaben: </div>
+            </div>
+
+            <div id="keyboard" class="keyboard">
+                <div class="keyboard-row">
+                    <button data-letter="Q">Q</button>
+                    <button data-letter="W">W</button>
+                    <button data-letter="E">E</button>
+                    <button data-letter="R">R</button>
+                    <button data-letter="T">T</button>
+                    <button data-letter="Z">Z</button>
+                    <button data-letter="U">U</button>
+                    <button data-letter="I">I</button>
+                    <button data-letter="O">O</button>
+                    <button data-letter="P">P</button>
+                    <button data-letter="Ü">Ü</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-letter="A">A</button>
+                    <button data-letter="S">S</button>
+                    <button data-letter="D">D</button>
+                    <button data-letter="F">F</button>
+                    <button data-letter="G">G</button>
+                    <button data-letter="H">H</button>
+                    <button data-letter="J">J</button>
+                    <button data-letter="K">K</button>
+                    <button data-letter="L">L</button>
+                    <button data-letter="Ö">Ö</button>
+                    <button data-letter="Ä">Ä</button>
+                </div>
+                <div class="keyboard-row">
+                    <button data-letter="Y">Y</button>
+                    <button data-letter="X">X</button>
+                    <button data-letter="C">C</button>
+                    <button data-letter="V">V</button>
+                    <button data-letter="B">B</button>
+                    <button data-letter="N">N</button>
+                    <button data-letter="M">M</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameOver" class="screen hidden">
+            <h2 id="gameResult"></h2>
+            <p id="revealWord"></p>
+            <button id="playAgain">Neues Spiel</button>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.1/socket.io.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html> 
