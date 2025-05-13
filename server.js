@@ -4,12 +4,26 @@ const http = require('http').createServer(app);
 const io = require('socket.io')(http, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        credentials: true
     }
+});
+
+// Enable CORS for all routes
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
 // Serve static files
 app.use(express.static(__dirname));
+
+// Add a test route
+app.get('/test', (req, res) => {
+    res.send('Server is running!');
+});
 
 const games = new Map();
 
